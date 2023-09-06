@@ -1,0 +1,28 @@
+﻿@model IEnumerable<api.Models.Pokemon>
+
+@{
+    ViewData["Title"] = "Inicio";
+}
+<h1>Personajes </h1>
+
+
+<div class="row row-cols-4">
+    @foreach (var item in Model)
+    {
+        <div class="container">
+
+            <div class="col" style="width: 15rem; height:auto">
+                <img src=@Html.DisplayFor(modelitem=>item.image) class="card-img-top">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelitem=>item.name)</h5>
+                        <p class="card-text">@Html.DisplayFor(modelitem=>item.gender) and @Html.DisplayFor(modelitem=>item.species)</p>
+                        <p class="card-text">ID del personaje: @Html.DisplayFor(modelitem=>item.id)</p>
+                        <a href="Rankings/Create" class="btn btn-primary">Calificar personaje</a>
+                    </div>
+                </div>
+                <br>
+                <br />
+            </div>
+        </div>
+    }
