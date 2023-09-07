@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ronal\\OneDrive\\Escritorio\\api\\api\\api.csproj": {}
+    "C:\\Users\\ronal\\OneDrive\\Escritorio\\RickYMOrty\\api\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ronal\\OneDrive\\Escritorio\\api\\api\\api.csproj": {
+    "C:\\Users\\ronal\\OneDrive\\Escritorio\\RickYMOrty\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ronal\\OneDrive\\Escritorio\\api\\api\\api.csproj",
+        "projectUniqueName": "C:\\Users\\ronal\\OneDrive\\Escritorio\\RickYMOrty\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\ronal\\OneDrive\\Escritorio\\api\\api\\api.csproj",
+        "projectPath": "C:\\Users\\ronal\\OneDrive\\Escritorio\\RickYMOrty\\api\\api.csproj",
         "packagesPath": "C:\\Users\\ronal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ronal\\OneDrive\\Escritorio\\api\\api\\obj\\",
+        "outputPath": "C:\\Users\\ronal\\OneDrive\\Escritorio\\RickYMOrty\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ronal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[6.0.21, )"
             },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.10, )"
@@ -70,6 +74,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
             },
             "System.Net.Http.Json": {
               "target": "Package",

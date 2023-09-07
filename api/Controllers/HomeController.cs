@@ -1,4 +1,5 @@
-﻿using api.Models;
+﻿using api.Datos;
+using api.Models;
 using api.Models.ViewModels;
 using api.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -10,11 +11,13 @@ namespace api.Controllers
     [Authorize]
     public class HomeController : Controller
     {
-        public async Task<IActionResult> Index()
+        ChartDatos _ChartDatos = new ChartDatos();
+        public IActionResult mejoresPer()
         {
-            return View();
-        }
+            var lista = _ChartDatos.Listar();
 
-   
+
+            return StatusCode(StatusCodes.Status200OK,lista);
+        }
     }
 }

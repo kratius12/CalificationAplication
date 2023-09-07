@@ -165,5 +165,27 @@ namespace api.Controllers
         {
           return (_context.Rankings?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+        [Authorize]
+        public IActionResult Grafica()
+        {
+            var personajesCalificado = _context.Personajes
+                .Select(p => new
+                {
+                    Nombre = p.Nombre,
+                    CalificacionPromedio = p.Rankings.Average(rp => rp.Calificacion)
+                })
+                .OrderByDescending(p => p.CalificacionPromedio)
+                .Take(5) // Obtener las 5 mejores calificadas (ajusta según tus necesidades)
+                .ToList();
+
+            // Separar los nombres de las películas y las calificaciones promedio
+            var nombresPersonajes = personajesCalificado.Select(p => p.Nombre).ToArray();
+            var calificacionesPromedio = personajesCalificado.Select(p => Math.Round((decimal)p.CalificacionPromedio, 2)).ToArray();
+
+            ViewBag.NombresPeliculas = nombresPersonajes;
+            ViewBag.CalificacionesPromedio = calificacionesPromedio;
+
+            return View();
+        }
     }
 }
