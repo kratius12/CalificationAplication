@@ -1,0 +1,38 @@
+create database rickymorty;
+use rickymorty;
+create table personaje(
+id int identity primary key,
+nombre varchar(100),
+genero varchar(12),
+especie varchar(30)
+);
+create table ranking(
+id int identity primary key,
+idPer int,
+calificacion int
+);
+alter table ranking
+add constraint fk_idPer
+foreign key (idPer) references personaje(id)
+
+insert into personaje(nombre,genero,especie) values
+('Rick Sanchez', 'Male', 'Human'),
+('Morty Smith', 'Male', 'Human'),
+('Summer Smith', 'Female', 'Human'),
+('Beth Smith', 'Female', 'Human'),
+('Jerry Smith', 'Male', 'Human'),
+('Abadango Cluster Princess', 'Female ', 'Alien'),
+('Abradolf Lincler', 'Male', 'Human'),
+('Adjudicator Rick', 'Male', 'Human'),
+('Agency Director', 'Male', 'Human'),
+('Alan Rails', 'Male', 'Human'),
+('Albert Einstein', 'Male', 'Human'),
+('Alexander', 'Female', 'Human'),
+('Alien Googah', 'Male', 'Human'),
+('Alien Morty', 'Male', 'Alien'),
+('Alien Rick', 'Male', 'Alien'),
+('Amish Cyborg', 'Male', 'Alien'),
+('Annie', 'Female', 'Alien'),
+('Antenna Morty', 'Male', 'Alien'),
+('Antenna Rick', 'Male', 'Alien'),
+('Ants in my Eyes Johnson', 'Male', 'human');
